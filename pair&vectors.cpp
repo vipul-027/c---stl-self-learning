@@ -11,7 +11,7 @@ using namespace std;
     p={2, abcd}; //2. second method to intiallization of the pair 
     //how to copy the value 
     pair<int, string> p1= p;
-    pi.first=3; // if we declare '&p1' then output of the program will changed.
+    p1.first=3; // if we declare '&p1' then output of the program will changed.
     cout<<p.first<<" "<<p.second<<endl;
     pair<int , int> p_array[3]; //declaration of array
     p_array[0]={1, 2};
