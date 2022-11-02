@@ -58,3 +58,28 @@ void printvec(vector<int> v){   // for line36 &v then value will be added in th 
   //-> time complexity of the copy function is o(n).
  
  }
+// nesting of vectors
+void printvec(vector<pair<int, int> >&v){
+     cout<<"size"<<" "<<v.size()<<endl;
+     for(int i=0; i<v.size(); ++i){
+      cout<<v[i].first<<" "<<v[i].second<<endl; // v[i].first use to print the 1st value of the 1st pair then v[i].second print the 2nd value of the 1st pair
+     }
+     cout<<endl;
+}
+int main(){
+  //vector of pair.
+  //1.//direct intialization without taking input.
+  vector<pair<int, int> >v={{1,2}, {2,3}, {3,4},{4,5}}; 
+   printvec(v);
+}
+   // 2. taking input from the user.
+   vector<pair<int , int> > v; {
+   int n; cin>>n;
+   for(int i=0; i<n; ++i){
+        int x, y;
+        cin>>x, y;
+        v.push_back({x, y}); // 1st method;
+       v.push_back(make_pair(x, y));//2nd method
+   }
+   printvec(v);
+}
